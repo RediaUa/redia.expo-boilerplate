@@ -1,0 +1,11 @@
+name: beta build
+ 
+on:
+  workflow_call:
+
+jobs:
+  beta-deploy:
+    runs-on: macos-latest
+    steps:
+      - name: deploy app to Testflight
+        run: echo "The app can be deployed"
