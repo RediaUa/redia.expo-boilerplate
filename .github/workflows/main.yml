@@ -1,0 +1,14 @@
+name: main workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:      
+  run_tests:
+    uses: ./.github/workflows/test.yml
+
+  beta_build:
+    needs: run_tests
+    uses: ./.github/workflows/beta-build.yml
