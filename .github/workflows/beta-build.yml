@@ -14,7 +14,7 @@ jobs:
           uses: actions/setup-java@v3
           with:
             distribution: 'zulu'
-            java-version: 11
+            java-version: 17
   
         - name: Set up Android SDK
           uses: android-actions/setup-android@v2
@@ -22,14 +22,13 @@ jobs:
             api-level: 33
             build-tools: 33.0.0
 
-        - name: install fastlane
-          run: |
-            gem install bundler fastlane
-            bundle install
+        - name: Install Node Modules
+          run: npm install
 
-        - name: run fastlane to produce apk
-          run: bundle exec fastlane build_unsigned_apk
-        
+        - name: Build apk
+          run: |
+            cd android
+            ./gradlew assembleRelease
         - name: upload apk artifact
           uses: actions/upload-artifact@v3
           with:
