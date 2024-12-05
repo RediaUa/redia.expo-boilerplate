@@ -10,25 +10,45 @@ jobs:
         - name: checkout repository
           uses: actions/checkout@v3
 
+        - name: install node modules
+          run: npm install
+
         - name: setup java
           uses: actions/setup-java@v3
           with:
             distribution: 'zulu'
             java-version: 17
-  
-        - name: set up android sdk
-          uses: android-actions/setup-android@v2
-          with:
-            api-level: 33
-            build-tools: 33.0.0
 
-        - name: install node modules
-          run: npm install
+        - name: setup node
+          uses: actions/setup-node@v3
+          with:
+            node-version: '23'   
+
+        - name: setup ruby
+          uses: ruby/setup-ruby@v1
+          with: 
+            ruby-version: '3.0' 
+        
+        - name: install fastlane
+          run: cd android && bundle install && cd ../
+
+        - name: cache gradle
+          uses: actions/cache@v3
+          with:
+            path: ~/.gradle/wrapper
+            key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+        
+        - name: cache gradle dependencies
+          uses: actions/cache@v3
+          with:
+            path: ~/.gradle/caches
+            key: ${{ runner.os }}-gradle-caches-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+            restore-keys: ${{ runner.os }}-gradle-caches-
 
         - name: build apk
           run: |
               cd android
-              ./gradlew assembleRelease
+              fastlane build_unsigned_apk
         
         - name: upload apk artifact
           uses: actions/upload-artifact@v3
