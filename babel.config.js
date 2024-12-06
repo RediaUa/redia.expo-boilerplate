@@ -16,9 +16,7 @@ module.exports = {
             "./"
           ],
           "alias": {
-            "@tests": "tests/*",
-            "@components/*": "src/components/*",
-            "@utils/*": "src/utils/*"
+            "@core/*": "src/core/*",
           }
         }]
     ]       
