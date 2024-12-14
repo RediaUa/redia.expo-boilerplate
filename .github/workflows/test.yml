@@ -1,22 +1,22 @@
 name: run tests
 
 on:
-    workflow_call:
+  workflow_call:
 
-jobs:             
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - name: checkout repository
-          uses: actions/checkout@v3
-        
-        - name: set up node
-          uses: actions/setup-node@v3
-          with:
-            node-version: '23'
-  
-        - name: install dependencies
-          run: npm install
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
 
-        - name: run tests
-          run: npm run test 
+      - name: set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23'
+
+      - name: install dependencies
+        run: npm install
+
+      - name: run tests
+        run: npm run test
