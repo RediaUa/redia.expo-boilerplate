@@ -1,11 +1,11 @@
 {
-    "extends": "@tsconfig/react-native/tsconfig.json",
-    "compilerOptions": {
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./",
     "baseUrl": "./",
     "paths": {
-      "@core/*": ["src/core/*"],
-    },
+      "@core/*": ["src/core/*"]
+    }
   }
 }

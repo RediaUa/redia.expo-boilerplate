@@ -1,3 +1,3 @@
-import ScreenContainer from './ScreenContainer';
+import ScreenContainer from './ScreenContainer'
 
-export { ScreenContainer };
+export { ScreenContainer }
