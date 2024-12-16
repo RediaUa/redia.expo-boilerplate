@@ -9,6 +9,7 @@ module.exports = {
     'universe/shared/typescript-analysis',
     'plugin:react-native-a11y/all',
     'plugin:prettier/recommended',
+    'plugin:react-hooks/recommended',
   ],
   overrides: [
     {
