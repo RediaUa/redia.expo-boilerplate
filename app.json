@@ -3,6 +3,7 @@
     "name": "wtg",
     "slug": "wtg",
     "version": "1.0.0",
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "plugins": ["expo-router"]
   }
 }

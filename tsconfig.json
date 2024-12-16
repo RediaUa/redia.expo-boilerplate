@@ -5,6 +5,7 @@
     "rootDir": "./",
     "baseUrl": "./",
     "paths": {
+      "@app/*": ["app/*"],
       "@core/*": ["src/core/*"]
     }
   }
