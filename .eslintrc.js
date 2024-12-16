@@ -30,6 +30,8 @@ module.exports = {
               ['^react', 'react', 'expo', '^@?\\w'],
               // side effect imports
               ['^\\u0000'],
+              // $app imports
+              ['^\\$app'],
               // $core imports
               ['^\\$core'],
               // relative imports: parents, children, same-folder  `..` and `.` last

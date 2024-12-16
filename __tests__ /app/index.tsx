@@ -1,8 +1,7 @@
 import { render } from '@testing-library/react-native'
+import App from '@app/index'
 
 import 'jest-styled-components'
-
-import App from '../App'
 
 test('renders correctly', () => {
   const { getByText } = render(<App />)
