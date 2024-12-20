@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  plugins: ['simple-import-sort'],
+  plugins: ['simple-import-sort', 'prefer-arrow'],
   extends: [
     'universe/native',
     'universe/shared/typescript-analysis',
@@ -20,6 +20,14 @@ module.exports = {
       rules: {
         semi: ['error', 'never'],
         quotes: ['error', 'single'],
+        'prefer-arrow/prefer-arrow-functions': [
+          'warn',
+          {
+            disallowPrototype: true, // Prevent prototype methods
+            singleReturnOnly: false, // Allow multi-line arrow functions
+            classPropertiesAllowed: false, // Disallow arrow functions in class properties
+          },
+        ],
         'simple-import-sort/imports': [
           'error',
           {
@@ -34,6 +42,12 @@ module.exports = {
               ['^\\$app'],
               // $core imports
               ['^\\$core'],
+              // $ui imports
+              ['^\\$ui'],
+              // $navigation imports
+              ['^\\$navigation'],
+              // $utils imports
+              ['^\\$utils'],
               // relative imports: parents, children, same-folder  `..` and `.` last
               ['^\\.\\.(?!/?$)', '^\\.\\./?$', '^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
             ],

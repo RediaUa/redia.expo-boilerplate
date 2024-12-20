@@ -20,6 +20,9 @@ module.exports = function (api) {
           alias: {
             '@app/*': 'app/*',
             '@core/*': 'src/core/*',
+            '@ui/*': 'src/core/ui/*',
+            '@navigation/*': ['src/core/navigation/*'],
+            '@utils/*': ['src/core/utils/*'],
           },
         },
       ],
