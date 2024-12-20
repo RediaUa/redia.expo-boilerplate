@@ -4,6 +4,9 @@
     "slug": "wtg",
     "version": "1.0.0",
     "newArchEnabled": true,
-    "plugins": ["expo-router"]
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
   }
 }

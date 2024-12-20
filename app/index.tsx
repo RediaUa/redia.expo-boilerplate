@@ -1,13 +1,44 @@
-import { Text } from 'react-native'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { ScreenContainer } from '@core/ui/containers'
+import { useEffect, useState } from 'react'
+import { Redirect } from 'expo-router'
+import * as SplashScreen from 'expo-splash-screen'
+import { wait } from '@utils/timers'
 
-export default function App() {
-  return (
-    <SafeAreaProvider>
-      <ScreenContainer>
-        <Text>Welcome!</Text>
-      </ScreenContainer>
-    </SafeAreaProvider>
-  )
+/*
+    Application entry point.
+    This is a place to load everything you need before opening the initial screen.
+*/
+
+const IS_AUTHENTICATED = false
+
+SplashScreen.preventAutoHideAsync().catch(console.warn)
+
+const App = () => {
+  const [appIsReady, setAppIsReady] = useState(false)
+
+  useEffect(() => {
+    const prepareApp = async () => {
+      try {
+        // load everything you need before opening the app
+        setAppIsReady(true)
+      } catch (e) {
+        console.warn(`[prepareApp]: ${e}`)
+      } finally {
+        await wait(300)
+        // hide the splash screen once the redirected route's screen is mounted to avoid flickering
+        // alternative you can hide a splash screen directly in the redirected route
+        SplashScreen.hideAsync().catch(console.warn)
+      }
+    }
+
+    prepareApp()
+  }, [])
+
+  if (appIsReady) {
+    // define the intial screen
+    return <Redirect href={IS_AUTHENTICATED ? '/home' : '/sign-in'} />
+  }
+
+  return null
 }
+
+export default App

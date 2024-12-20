@@ -6,7 +6,11 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": ["app/*"],
-      "@core/*": ["src/core/*"]
+      "@core/*": ["src/core/*"],
+      "@ui/*": ["src/core/ui/*"],
+      "@navigation/*": ["src/core/navigation/*"],
+      "@utils/*": ["src/core/utils/*"],
     }
-  }
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "navigation.d.ts"]
 }
