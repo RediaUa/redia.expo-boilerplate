@@ -1,4 +1,4 @@
-package com.wtg
+package com.anonymous.wtg
 
 import android.app.Application
 import android.content.res.Configuration
