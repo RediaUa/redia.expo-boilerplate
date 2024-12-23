@@ -4,9 +4,30 @@
     "slug": "wtg",
     "version": "1.0.0",
     "newArchEnabled": true,
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/core/splash-icon.png",
+          "dark": {
+            "image": "./assets/core/splash-icon-dark.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 250
+        }
+      ],
+      "expo-font"
+    ],
     "experiments": {
       "typedRoutes": true
+    },
+    "android": {
+      "package": "com.anonymous.wtg"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.wtg"
     }
   }
 }
