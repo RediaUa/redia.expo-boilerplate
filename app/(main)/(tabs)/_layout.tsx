@@ -1,12 +1,13 @@
 import { Tabs } from 'expo-router'
-import TabBarIcon from '@ui/tabs/navigation/TabBarIcon'
+import TabBarIcon from '@core/ui/components/tabs/navigation/TabBarIcon'
+import { getDefaultTabsOptions } from '@navigation/constants'
+import { useTheme } from 'styled-components/native'
 
 const TabsStack = () => {
+  const theme = useTheme()
+
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: true,
-      }}>
+    <Tabs screenOptions={getDefaultTabsOptions({ theme })}>
       <Tabs.Screen
         name='(homeTab)'
         options={{

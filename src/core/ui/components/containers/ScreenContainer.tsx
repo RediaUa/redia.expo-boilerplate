@@ -45,9 +45,11 @@ const StyledScrollView = styled(ScrollView).attrs<ScrollViewProps>(({ contentCon
   contentContainerStyle: [{ flexGrow: 1 }, contentContainerStyle],
 }))`
   flex: 1;
+  background-color: ${({ theme }) => theme.colors.background};
 `
 
 const Container = styled.View<EdgeInsets>`
   flex: 1;
   padding: ${({ left, right, top }) => `${top}px ${left}px ${right}px`};
+  align-items: center;
 `

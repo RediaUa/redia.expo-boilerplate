@@ -1,15 +1,19 @@
 import { Text } from 'react-native'
 import { render } from '@testing-library/react-native'
-import { ScreenContainer } from '@core/ui/containers'
+import { ScreenContainer } from '@core/ui/components/containers'
+import Providers from '@tests/helpers/Providers'
 
 import 'jest-styled-components'
 
 describe('ScreenContainer', () => {
   it('renders correctly without scrollable', () => {
     const { getByText } = render(
-      <ScreenContainer scrollable={false}>
-        <Text>Test Content</Text>
-      </ScreenContainer>,
+      <Providers>
+        <ScreenContainer scrollable={false}>
+          <Text>Test Content</Text>
+        </ScreenContainer>
+        ,
+      </Providers>,
     )
 
     expect(getByText('Test Content')).toBeTruthy()
@@ -17,9 +21,11 @@ describe('ScreenContainer', () => {
 
   it('renders correctly with scrollable', () => {
     const { getByText } = render(
-      <ScreenContainer scrollable>
-        <Text>Test Content</Text>
-      </ScreenContainer>,
+      <Providers>
+        <ScreenContainer scrollable>
+          <Text>Test Content</Text>
+        </ScreenContainer>
+      </Providers>,
     )
 
     expect(getByText('Test Content')).toBeTruthy()
@@ -28,9 +34,11 @@ describe('ScreenContainer', () => {
   it('applies custom styles correctly', () => {
     const customStyle = { backgroundColor: 'red' }
     const { getByTestId } = render(
-      <ScreenContainer style={customStyle}>
-        <Text>Test Content</Text>
-      </ScreenContainer>,
+      <Providers>
+        <ScreenContainer style={customStyle}>
+          <Text>Test Content</Text>
+        </ScreenContainer>
+      </Providers>,
     )
 
     const container = getByTestId('screen-container')

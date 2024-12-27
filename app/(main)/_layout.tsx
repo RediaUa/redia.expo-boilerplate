@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { Stack, useRouter } from 'expo-router'
-import { defaultStackOptions } from '@navigation/constants'
 
 const IS_AUTHENTICATED = true
 
@@ -18,7 +17,7 @@ const MainStack = () => {
   }, [router])
 
   return (
-    <Stack screenOptions={defaultStackOptions}>
+    <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name='(tabs)' />
     </Stack>
   )
