@@ -1,5 +1,5 @@
 import { Text } from 'react-native'
-import { ScreenContainer } from '@core/ui/containers'
+import { ScreenContainer } from '@ui/components/containers'
 
 const HomeScreen = () => {
   return (

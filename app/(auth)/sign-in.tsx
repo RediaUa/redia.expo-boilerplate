@@ -1,6 +1,6 @@
 import { Button } from 'react-native'
 import { useRouter } from 'expo-router'
-import { ScreenContainer } from '@core/ui/containers'
+import { ScreenContainer } from '@core/ui/components/containers'
 
 const SignInScreen = () => {
   const router = useRouter()

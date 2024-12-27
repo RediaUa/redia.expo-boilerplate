@@ -6,6 +6,7 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": ["app/*"],
+      "@tests/*": ["__tests__/*"],
       "@store/*": ["src/store/*"],
       "@core/*": ["src/core/*"],
       "@native/*": ["src/native/*"],
@@ -14,5 +15,6 @@
       "@utils/*": ["src/core/utils/*"]
     }
   },
+  "types": ["@types/styled-components-react-native"],
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "navigation.d.ts"]
 }
