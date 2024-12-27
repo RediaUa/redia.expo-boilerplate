@@ -19,7 +19,9 @@ module.exports = function (api) {
           root: ['./'],
           alias: {
             '@app/*': 'app/*',
+            '@store/*': ['src/store/*'],
             '@core/*': 'src/core/*',
+            '@native/*': 'src/native/*',
             '@ui/*': 'src/core/ui/*',
             '@navigation/*': ['src/core/navigation/*'],
             '@utils/*': ['src/core/utils/*'],

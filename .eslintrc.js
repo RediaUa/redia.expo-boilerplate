@@ -35,13 +35,17 @@ module.exports = {
               // type imports
               ['\\u0000$'],
               // packages: `react` and `expo` related packages come first
-              ['^react', 'react', 'expo', '^@?\\w'],
+              ['^react', 'react', 'expo', '@reduxjs', '^@?\\w'],
               // side effect imports
               ['^\\u0000'],
               // $app imports
               ['^\\$app'],
+              // $store imports
+              ['^\\$store'],
               // $core imports
               ['^\\$core'],
+              // $native imports
+              ['^\\$native'],
               // $ui imports
               ['^\\$ui'],
               // $navigation imports
