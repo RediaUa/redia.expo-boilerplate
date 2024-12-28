@@ -2,6 +2,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Provider as ReduxProvider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { Slot } from 'expo-router'
+import I18nProvider from '@core/i18n/context'
 import store, { persistor } from '@store/index'
 import { ThemeContextProvider } from '@ui/theme/context'
 
@@ -16,7 +17,9 @@ const RootLayout = () => {
       <PersistGate persistor={persistor}>
         <SafeAreaProvider>
           <ThemeContextProvider>
-            <Slot />
+            <I18nProvider>
+              <Slot />
+            </I18nProvider>
           </ThemeContextProvider>
         </SafeAreaProvider>
       </PersistGate>

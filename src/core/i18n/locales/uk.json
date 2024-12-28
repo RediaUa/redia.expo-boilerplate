@@ -1,0 +1,12 @@
+{
+  "auth": {
+    "actions": {
+      "goToApp": "Відкрити додаток"
+    }
+  },
+  "settings": {
+    "actions": {
+      "signOut": "Вийти"
+    }
+  }
+}
