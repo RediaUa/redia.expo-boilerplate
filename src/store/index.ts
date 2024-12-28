@@ -17,7 +17,7 @@ const persistConfig = {
   key: 'root',
   version: 1,
   storage: reduxStorage,
-  whitelist: ['auth', 'theme'],
+  whitelist: ['auth', 'theme', 'i18n'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

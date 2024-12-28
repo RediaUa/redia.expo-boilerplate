@@ -1,0 +1,12 @@
+{
+  "auth": {
+    "actions": {
+      "goToApp": "Go to the app"
+    }
+  },
+  "settings": {
+    "actions": {
+      "signOut": "Sign out"
+    }
+  }
+}
