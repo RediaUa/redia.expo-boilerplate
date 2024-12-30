@@ -1,20 +1,20 @@
 import { useEffect } from 'react'
 import { Stack, useRouter } from 'expo-router'
-
-const IS_AUTHENTICATED = true
+import { useAppSelector } from '@store/hooks'
 
 const MainStack = () => {
   const router = useRouter()
+  const isAuthenticated = useAppSelector((store) => store.auth.isAuthenticated)
 
   useEffect(() => {
     // protected main app stack
     // redirect to sign-in if not authenticated
-    if (!IS_AUTHENTICATED) {
+    if (!isAuthenticated) {
       router.replace({
         pathname: '/sign-in',
       })
     }
-  }, [router])
+  }, [isAuthenticated, router])
 
   return (
     <Stack screenOptions={{ headerShown: false }}>

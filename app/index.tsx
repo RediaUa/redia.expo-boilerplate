@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Redirect } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
+import { useAppSelector } from '@store/hooks'
 import { wait } from '@utils/timers'
 
 /*
@@ -8,12 +9,11 @@ import { wait } from '@utils/timers'
     This is a place to load everything you need before opening the initial screen.
 */
 
-const IS_AUTHENTICATED = false
-
 SplashScreen.preventAutoHideAsync().catch(console.warn)
 
 const App = () => {
   const [appIsReady, setAppIsReady] = useState(false)
+  const isAuthenticated = useAppSelector((store) => store.auth.isAuthenticated)
 
   useEffect(() => {
     const prepareApp = async () => {
@@ -35,7 +35,7 @@ const App = () => {
 
   if (appIsReady) {
     // define the intial screen
-    return <Redirect href={IS_AUTHENTICATED ? '/home' : '/sign-in'} />
+    return <Redirect href={isAuthenticated ? '/home' : '/sign-in'} />
   }
 
   return null

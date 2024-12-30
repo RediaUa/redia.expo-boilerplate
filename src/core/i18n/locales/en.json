@@ -1,5 +1,19 @@
 {
   "auth": {
+    "navigation": {
+      "signIn": "Sign in"
+    },
+    "labels": {
+      "username": "Username",
+      "password": "Password"
+    },
+    "errors": {
+      "empty": {
+        "username": "Username is required",
+        "password": "Password is required"
+      },
+      "credentials": "Invalid credentials"
+    },
     "actions": {
       "goToApp": "Go to the app"
     }
