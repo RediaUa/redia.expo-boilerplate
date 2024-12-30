@@ -1,10 +1,18 @@
-import { Text } from 'react-native'
-import { ScreenContainer } from '@ui/components/containers'
+import { useTranslation } from 'react-i18next'
+import { ScreenContainer } from '@core/ui/components/containers'
+import { useAppSelector } from '@store/hooks'
+import Text from '@ui/components/texts/Text'
 
 const HomeScreen = () => {
+  const user = useAppSelector((state) => state.auth.user)
+  const { t } = useTranslation()
+
   return (
     <ScreenContainer>
-      <Text>Home screen</Text>
+      <Text>
+        {t('home.text.welcome')} {user?.name}, {'\n'}
+      </Text>
+      <Text>{t('home.text.description')}</Text>
     </ScreenContainer>
   )
 }
