@@ -1,15 +1,17 @@
-import React, { ForwardedRef, forwardRef, useState } from 'react'
+import { ForwardedRef, forwardRef, memo, useState } from 'react'
 import {
   NativeSyntheticEvent,
   TextInput,
   TextInputFocusEventData,
   TextInputProps,
 } from 'react-native'
+import Text from '@ui/components/texts/Text'
 import styled, { useTheme } from 'styled-components/native'
 
 interface InputProps extends TextInputProps {
   value: string
   onChangeText: (text: string) => void
+  secure?: boolean
   error?: string | null
   label?: string
   height?: number
@@ -18,6 +20,7 @@ interface InputProps extends TextInputProps {
 
 const DEFAULT_INPUT_HEIGHT = 48
 const DEFAULT_LABEL_HEIGHT = 20
+const DEFAULT_ERROR_HEIGHT = 20
 
 const Input = forwardRef<TextInput, InputProps>(
   (
@@ -26,12 +29,13 @@ const Input = forwardRef<TextInput, InputProps>(
       onChangeText,
       error,
       label,
-      accessibilityLabel = 'Text input field',
-      accessibilityHint = 'Input field',
-      height = DEFAULT_INPUT_HEIGHT,
       onBlur,
       onFocus,
       width,
+      accessibilityLabel = 'Text input field',
+      accessibilityHint = 'Input field',
+      height = DEFAULT_INPUT_HEIGHT,
+      secure = false,
       ...rest
     },
     ref,
@@ -58,6 +62,7 @@ const Input = forwardRef<TextInput, InputProps>(
         )}
         <StyledTextInput
           ref={ref}
+          secureTextEntry={secure}
           accessibilityLabel={accessibilityLabel}
           accessibilityHint={accessibilityHint}
           value={value}
@@ -76,12 +81,13 @@ const Input = forwardRef<TextInput, InputProps>(
 )
 
 const Container = styled.View<{ width?: number }>`
-  margin-bottom: 16px;
+  padding-bottom: ${DEFAULT_LABEL_HEIGHT + DEFAULT_ERROR_HEIGHT}px;
+  padding-top: 8px;
   position: relative;
   width: ${({ width }) => (width ? `${width}px` : '100%')};
 `
 
-const Label = styled.Text<{ isFocused: boolean; inputHeight: number }>`
+const Label = styled(Text)<{ isFocused: boolean; inputHeight: number }>`
   position: absolute;
   height: ${DEFAULT_LABEL_HEIGHT}px;
   top: ${({ isFocused, inputHeight }) =>
@@ -96,6 +102,7 @@ const Label = styled.Text<{ isFocused: boolean; inputHeight: number }>`
 const StyledTextInput = styled.TextInput<{
   isFocused: boolean
   height: number
+  secureTextEntry: boolean
   ref: ForwardedRef<TextInput>
 }>`
   height: ${({ height }) => height}px;
@@ -104,13 +111,16 @@ const StyledTextInput = styled.TextInput<{
   border-radius: 4px;
   padding: 0 16px;
   font-size: ${({ theme }) => theme.fontSize.x4}px;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme, secureTextEntry }) =>
+    secureTextEntry ? theme.colors.primaryFocused : theme.colors.text};
 `
 
-const ErrorText = styled.Text`
-  margin-top: 8px;
-  font-size: 14px;
+export const ErrorText = styled(Text)`
+  position: absolute;
+  bottom: ${DEFAULT_ERROR_HEIGHT - 4}px;
+  height: ${DEFAULT_ERROR_HEIGHT}px;
+  font-size: ${({ theme }) => theme.fontSize.x3}px;
   color: ${({ theme }) => theme.colors.error};
 `
 
-export default Input
+export default memo(Input)

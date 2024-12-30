@@ -30,7 +30,10 @@ const ScreenContainer: FC<Props> = ({
 
   if (scrollable) {
     return (
-      <StyledScrollView contentContainerStyle={contentContainerStyle} {...rest}>
+      <StyledScrollView
+        keyboardShouldPersistTaps='handled'
+        contentContainerStyle={contentContainerStyle}
+        {...rest}>
         {content}
       </StyledScrollView>
     )
