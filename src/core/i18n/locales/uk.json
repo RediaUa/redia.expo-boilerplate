@@ -20,7 +20,9 @@
   },
   "settings": {
     "actions": {
-      "signOut": "Вийти"
+      "switchTheme": "Темна тема",
+      "switchLanguage": "Змінити мову",
+      "logOut": "Вийти"
     }
   },
   "home": {
