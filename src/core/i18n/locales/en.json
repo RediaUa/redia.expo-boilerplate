@@ -20,7 +20,9 @@
   },
   "settings": {
     "actions": {
-      "signOut": "Sign out"
+      "switchTheme": "Dark mode",
+      "switchLanguage": "Switch language",
+      "logOut": "Log out"
     }
   },
   "home": {
