@@ -22,5 +22,18 @@
     "actions": {
       "signOut": "Sign out"
     }
+  },
+  "home": {
+    "navigation": {
+      "header": "Home",
+      "tabs": {
+        "tab1": "Home",
+        "tab2": "Settings"
+      }
+    },
+    "text": {
+      "welcome": "Welcome dear",
+      "description": "Your great app can be here!"
+    }
   }
 }
