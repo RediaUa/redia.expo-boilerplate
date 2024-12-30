@@ -1,7 +1,21 @@
 {
   "auth": {
+    "navigation": {
+      "signIn": "Вхід"
+    },
+    "labels": {
+      "username": "Ім'я користувача",
+      "password": "Пароль"
+    },
+    "errors": {
+      "empty": {
+        "username": "Ім'я користувача є обов'язковим",
+        "password": "Пароль є обов'язковим"
+      },
+      "credentials": "Недійсні облікові дані"
+    },
     "actions": {
-      "goToApp": "Відкрити додаток"
+      "goToApp": "Перейти до додатку"
     }
   },
   "settings": {
