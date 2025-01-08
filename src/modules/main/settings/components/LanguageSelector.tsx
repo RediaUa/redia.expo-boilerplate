@@ -21,6 +21,18 @@ const DEFAULT_LANGUAGES_OPTIONS: LanguageOption[] = [
     emoji: '🇺🇸',
   },
   {
+    value: SupportedLanguages.ES,
+    emoji: '🇪🇸',
+  },
+  {
+    value: SupportedLanguages.AR,
+    emoji: '🇸🇦',
+  },
+  {
+    value: SupportedLanguages.JA,
+    emoji: '🇯🇵',
+  },
+  {
     value: SupportedLanguages.UK,
     emoji: '🇺🇦',
   },

@@ -1,0 +1,41 @@
+{
+  "auth": {
+    "navigation": {
+      "signIn": "Iniciar sesión"
+    },
+    "labels": {
+      "username": "Nombre de usuario",
+      "password": "Contraseña"
+    },
+    "errors": {
+      "empty": {
+        "username": "Se requiere el nombre de usuario",
+        "password": "Se requiere la contraseña"
+      },
+      "credentials": "Credenciales inválidas"
+    },
+    "actions": {
+      "goToApp": "Ir a la aplicación"
+    }
+  },
+  "settings": {
+    "actions": {
+      "switchTheme": "Modo oscuro",
+      "switchLanguage": "Cambiar idioma",
+      "logOut": "Cerrar sesión"
+    }
+  },
+  "home": {
+    "navigation": {
+      "header": "Inicio",
+      "tabs": {
+        "tab1": "Inicio",
+        "tab2": "Ajustes"
+      }
+    },
+    "text": {
+      "welcome": "Bienvenido",
+      "description": "¡Tu gran aplicación puede estar aquí!"
+    }
+  }
+}

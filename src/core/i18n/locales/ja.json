@@ -1,0 +1,41 @@
+{
+  "auth": {
+    "navigation": {
+      "signIn": "サインイン"
+    },
+    "labels": {
+      "username": "ユーザー名",
+      "password": "パスワード"
+    },
+    "errors": {
+      "empty": {
+        "username": "ユーザー名が必要です",
+        "password": "パスワードが必要です"
+      },
+      "credentials": "無効な資格情報"
+    },
+    "actions": {
+      "goToApp": "アプリへ移動"
+    }
+  },
+  "settings": {
+    "actions": {
+      "switchTheme": "ダークモード",
+      "switchLanguage": "言語を切り替える",
+      "logOut": "ログアウト"
+    }
+  },
+  "home": {
+    "navigation": {
+      "header": "ホーム",
+      "tabs": {
+        "tab1": "ホーム",
+        "tab2": "設定"
+      }
+    },
+    "text": {
+      "welcome": "ようこそ",
+      "description": "ここに素晴らしいアプリが表示されます！"
+    }
+  }
+}
