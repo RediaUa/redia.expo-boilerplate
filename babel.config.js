@@ -22,6 +22,7 @@ module.exports = function (api) {
             '@tests/*': '__tests__/*',
             '@store/*': ['src/store/*'],
             '@core/*': 'src/core/*',
+            '@modules/*': 'src/modules/*',
             '@native/*': 'src/native/*',
             '@ui/*': 'src/core/ui/*',
             '@navigation/*': ['src/core/navigation/*'],
