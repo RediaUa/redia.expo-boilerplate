@@ -1,0 +1,41 @@
+{
+  "auth": {
+    "navigation": {
+      "signIn": "تسجيل الدخول"
+    },
+    "labels": {
+      "username": "اسم المستخدم",
+      "password": "كلمة المرور"
+    },
+    "errors": {
+      "empty": {
+        "username": "اسم المستخدم مطلوب",
+        "password": "كلمة المرور مطلوبة"
+      },
+      "credentials": "بيانات اعتماد غير صالحة"
+    },
+    "actions": {
+      "goToApp": "الذهاب إلى التطبيق"
+    }
+  },
+  "settings": {
+    "actions": {
+      "switchTheme": "الوضع الداكن",
+      "switchLanguage": "تغيير اللغة",
+      "logOut": "تسجيل الخروج"
+    }
+  },
+  "home": {
+    "navigation": {
+      "header": "الرئيسية",
+      "tabs": {
+        "tab1": "الرئيسية",
+        "tab2": "الإعدادات"
+      }
+    },
+    "text": {
+      "welcome": "مرحبًا بك",
+      "description": "يمكن أن يكون تطبيقك الرائع هنا!"
+    }
+  }
+}
