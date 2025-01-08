@@ -10,6 +10,7 @@
       "@store/*": ["src/store/*"],
       "@core/*": ["src/core/*"],
       "@native/*": ["src/native/*"],
+      "@modules/*": ["src/modules/*"],
       "@ui/*": ["src/core/ui/*"],
       "@navigation/*": ["src/core/navigation/*"],
       "@utils/*": ["src/core/utils/*"]

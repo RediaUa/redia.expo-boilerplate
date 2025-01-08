@@ -50,6 +50,8 @@ module.exports = {
               ['^\\$ui'],
               // $navigation imports
               ['^\\$navigation'],
+              // $modules imports
+              ['^\\$modules'],
               // $utils imports
               ['^\\$utils'],
               // relative imports: parents, children, same-folder  `..` and `.` last
