@@ -7,6 +7,7 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier . --write",
     "format": "npm run lint:fix && npm run prettier",
+    "tsc": "tsc --noEmit",
     "test": "jest",
     "start": "expo start --dev-client",
     "android": "expo run:android",
@@ -16,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format"
+      "pre-commit": "npm run format && npm tsc"
     }
   },
   "commitlint": {
