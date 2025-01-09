@@ -45,7 +45,8 @@
     "react-native-screens": "~4.1.0",
     "react-redux": "^9.2.0",
     "redux-persist": "^6.0.0",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "expo-clipboard": "~7.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

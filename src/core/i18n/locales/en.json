@@ -35,7 +35,24 @@
     },
     "text": {
       "welcome": "Welcome dear",
-      "description": "Your great app can be here!"
+      "description": "Your great app can be here!",
+      "contactMe": "Contact Author"
+    },
+    "modals": {
+      "contact": {
+        "header": "Contact Author",
+        "hint": "* Use long press to copy the link",
+        "telegram": "Telegram",
+        "linkedIn": "Linked in",
+        "copy": {
+          "errorMessage": "'Cannot open the link.",
+          "message": "Copied to Clipboard",
+          "successMessage": "The link has been copied."
+        }
+      }
     }
+  },
+  "common": {
+    "error": "Error"
   }
 }

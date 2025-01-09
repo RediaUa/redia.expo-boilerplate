@@ -5,6 +5,7 @@ import styled from 'styled-components/native'
 interface Props extends TextProps {
   children: React.ReactNode
   fontSize?: number
+  cursive?: boolean
 }
 
 const Text: FC<Props> = ({ children, fontSize, ...rest }) => {
@@ -20,9 +21,10 @@ const Text: FC<Props> = ({ children, fontSize, ...rest }) => {
   )
 }
 
-const ThemedText = styled.Text<Pick<Props, 'fontSize'>>`
+const ThemedText = styled.Text<Pick<Props, 'fontSize' | 'cursive'>>`
   color: ${({ theme }) => theme.colors.text};
   font-size: ${({ theme, fontSize }) => fontSize ?? theme.fontSize.x4}px;
+  font-style: ${({ cursive }) => (cursive ? 'italic' : 'normal')};
   line-height: ${({ theme, fontSize }) =>
     fontSize ? getLineHeight(fontSize) : getLineHeight(theme.fontSize.x4)}px;
 `

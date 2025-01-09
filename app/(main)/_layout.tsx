@@ -1,10 +1,15 @@
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Stack, useRouter } from 'expo-router'
+import { getDefaultModalOptions } from '@navigation/constants'
 import { useAppSelector } from '@store/hooks'
+import { useTheme } from 'styled-components/native'
 
 const MainStack = () => {
   const router = useRouter()
-  const isAuthenticated = useAppSelector((store) => store.auth.isAuthenticated)
+  const theme = useTheme()
+  const { t } = useTranslation()
+  const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated)
 
   useEffect(() => {
     // protected main app stack
@@ -19,6 +24,13 @@ const MainStack = () => {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name='(tabs)' />
+      <Stack.Screen
+        name='modals/contact'
+        options={{
+          ...getDefaultModalOptions({ router, theme }),
+          headerTitle: t('home.modals.contact.header'),
+        }}
+      />
     </Stack>
   )
 }
