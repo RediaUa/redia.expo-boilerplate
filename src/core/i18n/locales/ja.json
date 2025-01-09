@@ -9,13 +9,13 @@
     },
     "errors": {
       "empty": {
-        "username": "ユーザー名が必要です",
-        "password": "パスワードが必要です"
+        "username": "ユーザー名は必須です",
+        "password": "パスワードは必須です"
       },
       "credentials": "無効な資格情報"
     },
     "actions": {
-      "goToApp": "アプリへ移動"
+      "goToApp": "アプリに移動"
     }
   },
   "settings": {
@@ -35,7 +35,24 @@
     },
     "text": {
       "welcome": "ようこそ",
-      "description": "ここに素晴らしいアプリが表示されます！"
+      "description": "ここに素晴らしいアプリを作成できます！",
+      "contactMe": "著者に連絡する"
+    },
+    "modals": {
+      "contact": {
+        "header": "著者に連絡する",
+        "hint": "* リンクをコピーするには長押ししてください",
+        "telegram": "Telegram",
+        "linkedIn": "LinkedIn",
+        "copy": {
+          "errorMessage": "リンクを開くことができません。",
+          "message": "クリップボードにコピーされました",
+          "successMessage": "リンクがコピーされました。"
+        }
+      }
     }
+  },
+  "common": {
+    "error": "エラー"
   }
 }

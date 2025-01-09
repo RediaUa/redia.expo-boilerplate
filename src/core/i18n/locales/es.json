@@ -30,12 +30,29 @@
       "header": "Inicio",
       "tabs": {
         "tab1": "Inicio",
-        "tab2": "Ajustes"
+        "tab2": "Configuración"
       }
     },
     "text": {
-      "welcome": "Bienvenido",
-      "description": "¡Tu gran aplicación puede estar aquí!"
+      "welcome": "Bienvenido querido",
+      "description": "¡Tu gran aplicación puede estar aquí!",
+      "contactMe": "Contactar al autor"
+    },
+    "modals": {
+      "contact": {
+        "header": "Contactar al autor",
+        "hint": "* Mantén presionado para copiar el enlace",
+        "telegram": "Telegram",
+        "linkedIn": "LinkedIn",
+        "copy": {
+          "errorMessage": "No se puede abrir el enlace.",
+          "message": "Copiado al portapapeles",
+          "successMessage": "El enlace ha sido copiado."
+        }
+      }
     }
+  },
+  "common": {
+    "error": "Error"
   }
 }

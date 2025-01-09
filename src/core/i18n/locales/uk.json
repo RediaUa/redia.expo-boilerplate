@@ -1,7 +1,7 @@
 {
   "auth": {
     "navigation": {
-      "signIn": "Вхід"
+      "signIn": "Увійти"
     },
     "labels": {
       "username": "Ім'я користувача",
@@ -20,7 +20,7 @@
   },
   "settings": {
     "actions": {
-      "switchTheme": "Темна тема",
+      "switchTheme": "Темний режим",
       "switchLanguage": "Змінити мову",
       "logOut": "Вийти"
     }
@@ -35,7 +35,24 @@
     },
     "text": {
       "welcome": "Ласкаво просимо",
-      "description": "Ваш чудовий додаток може бути тут!"
+      "description": "Ваш чудовий додаток може бути тут!",
+      "contactMe": "Зв'язатися з автором"
+    },
+    "modals": {
+      "contact": {
+        "header": "Зв'язатися з автором",
+        "hint": "* Натисніть і утримуйте, щоб скопіювати",
+        "telegram": "Telegram",
+        "linkedIn": "LinkedIn",
+        "copy": {
+          "errorMessage": "Не вдалося відкрити посилання.",
+          "message": "Скопіювати в буфер обміну",
+          "successMessage": "Посилання було скопійовано."
+        }
+      }
     }
+  },
+  "common": {
+    "error": "Помилка"
   }
 }
