@@ -47,7 +47,7 @@ const SignInScreen = () => {
 
   const handleBtnPress = () => {
     if (!formData?.name) {
-      setErrors({ name: t('auth.errors.empty.username') })
+      // setErrors({ name: t('auth.errors.empty.username') })
       nameInputRef.current?.focus()
       return
     }
