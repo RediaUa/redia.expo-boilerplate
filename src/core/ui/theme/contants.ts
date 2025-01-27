@@ -13,7 +13,7 @@ export const lightTheme: Theme = {
   colors: {
     background: '#ffffff',
     text: '#000000',
-    error: '#e53935',
+    error: '#c62828',
     primary: '#7c3aed',
     primaryFocused: '#310099',
     primaryDisabled: '#c4b5fd',
